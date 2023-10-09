@@ -1,3 +1,160 @@
-.N.collapse navbar-collapse{
-    color: white;
+/* styles.css */
+
+/* Body */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+.navbar {
+    background-color: #343a40 !important; /* Dark background color for the navbar */
+}
+.NavTitle{
+    font-family: Samurai;
+}
+.navbar-brand img {
+    max-height: 50px;
+    padding: 5px;
+}
+
+/* Title Animation */
+.Title {
+    text-align: center;
+    font-family: Samurai;
+    font-size: 100px;
+    animation: color-change 1s infinite;
+}
+@font-face {
+    font-family: Samurai;
+    src: url(Fonts/SamuraiBlast.woff);
+}
+
+@keyframes color-change {
+    0% { color: red; }
+    50% { color: blue; }
+    100% { color: red; }
+}
+
+#game-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Guess Input */
+#current-guess {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff; /* Blue color for the guess number */
+    transition: color 0.3s; /* Add color transition */
+}
+
+/* Guess Buttons */
+button {
+    border-radius: 5px !important;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px !important;
+    padding: 10px 25px;
+    transition: background-color 0.3s, transform 0.3s; /* Add smooth transitions */
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Commit and Reset Buttons */
+#commit, #reset {
+    background-color: #28a745; /* Green color for commit button */
+}
+
+#reset {
+    background-color: #dc3545; /* Red color for reset button */
+}
+
+/* Guess Log */
+#guess-log {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+}
+
+#guess-log li {
+    background-color: #f8f9fa; /* Light gray for log entries */
+    border: 1px solid #e1e4e8;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 5px 10px;
+    text-align: left;
+}
+
+/* Win Message Animation */
+.win-message {
+    font-size: 20px;
+    font-weight: bold;
+    color: #28a745;
+    margin-top: 20px;
+    animation: win-message-animation 2s infinite;
+}
+
+@keyframes win-message-animation {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Lose Message Animation */
+.lose-message {
+    font-size: 20px;
+    font-weight: bold;
+    color: #dc3545;
+    margin-top: 20px;
+    animation: lose-message-animation 2s infinite;
+}
+
+@keyframes lose-message-animation {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Mischievous Computer Response */
+.mischievous {
+    color: #ff6b6b; /* Light red for mischievous responses */
+}
+
+/* Subtle Background Animation */
+body {
+    background-color: #f0f0f0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+                      url('background-image.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-attachment: fixed;
+    animation: background-animation 20s infinite alternate; /* Add background animation */
+}
+
+@keyframes background-animation {
+    0% {
+        background-color: #A9FDED;
+    }
+    100% {
+        background-color: #d23008;
+    }
 }
